@@ -44,7 +44,7 @@ async function fetchAniList(page) {
         studios(isMain: true) {
           nodes { name }
         }
-        coverImage { large }
+        coverImage { extraLarge }
       }
     }
   }`;
@@ -173,6 +173,7 @@ async function upsertAnime(env, anime) {
       popularity = excluded.popularity,
       rating = excluded.rating,
       overview = excluded.overview,
+      image = excluded.image,
       updated_at = CURRENT_TIMESTAMP
   `).bind(
     anime.id,
