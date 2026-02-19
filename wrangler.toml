@@ -11,7 +11,7 @@ database_id = "3ee54e19-03cb-45ce-8877-a540e1d78adf"
 
 [[kv_namespaces]]
 binding = "RATE_LIMIT"
-id = "your-kv-id"
+id = "9429d1b5b13343f58ee3275327241ccd"
 
 [vars]
 ALLOWED_ORIGIN = "https://neonanime.pages.dev"
