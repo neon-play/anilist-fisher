@@ -194,4 +194,14 @@ async function upsertAnime(env, anime) {
     anime.type,
     anime.year
   ).run();
+  if (anime.tags) {
+  const tags = JSON.parse(anime.tags);
+
+  for (const tag of tags) {
+    await env.DB.prepare(`
+      INSERT OR IGNORE INTO anime_info_tags (anime_id, tag_name)
+      VALUES (?, ?)
+    `).bind(anime.id, tag).run();
+  }
+}
 }
