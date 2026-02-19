@@ -44,7 +44,10 @@ async function fetchAniList(page) {
         studios(isMain: true) {
           nodes { name }
         }
-        coverImage { extraLarge }
+        coverImage {
+  large
+  extraLarge
+}
       }
     }
   }`;
